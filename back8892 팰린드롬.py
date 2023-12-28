@@ -1,26 +1,5 @@
 # #팰린드롬   거꾸로 읽어도 똑같은 문자? 회문
-#
-#
-# from itertools import permutations, combinations
-#
-# num =[1,2,3]
-# perm = permutations(num,2)
-# combi = combinations(num, 2)
-#
-# print(perm)
-# print(combi)
-#
-# print(list(perm))
-# print(list(combi))
-#
-# words = ['aaba', 'ba', 'ababa', 'bbaa', 'baaba']
-#
-# for word1, word2 in permutations(words,2):
-#     p =word1 + word2
-#
-#     print(word1, word2, p)
-#
-#
+
 
 import sys
 input = sys.stdin.readline
@@ -83,3 +62,25 @@ for tc in range(int(input())):
 #     find()
 #
 #     print(ans)
+
+#
+#
+# import sys
+# input = sys.stdin.readline
+#
+# for tc in range(int(input())):
+#     k = int(input())
+#     words = [input().rstrip() for _ in range(k)]    # 주어진 단어들 입력
+#
+#     for i in range(k):                              # 2중 for문을 통해 모든 경우 탐색
+#         for j in range(k):
+#             if i == j:                              # 같은 단어를 뽑는 경우는 pass(continue)
+#                 continue
+#
+#             word = words[i] + words[j]              # 두 단어를 뽑아 붙이기
+#
+#             if word == word[::-1]:                  # 회문이라면,
+#                 print(word)                         # 출력하고
+#                 exit(0)                             # 프로그램 종료(하나만 찾아도 되므로)
+#
+#     print(0)                                        # 끝까지 못찾았다면 0 출력

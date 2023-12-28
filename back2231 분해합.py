@@ -7,20 +7,48 @@
 
 #N + map(int,str(N))
 
-
-import sys
-input = sys.stdin.readline
-
 N= int(input())
 
-start = max(1, N - (9* len(str(N))))
+maxtodtjdwk = max(1, N - (9* len(str(N))))
+#생성자의 각 자릿수의 합의 최대치
 ans = 0
 
-for num in range(start, N+1):
-    disaassemble_sum = num + sum(map(int, str(num)))
-
-    if disaassemble_sum == N :
+for num in range(maxtodtjdwk, N+1):
+    #생성자의 각 자릿수의 합의 최대치만큼 반복해야지?
+    inputnum = num + sum(map(int, str(num)))
+    #생성자랑 생성자 자릿수의 합
+    if inputnum == N :
         ans = num
         break
 
 print(ans)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
