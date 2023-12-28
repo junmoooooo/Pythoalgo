@@ -1,19 +1,23 @@
 from collections import deque
 
-for _ in range(int(input())):
-    brackets = input().rstrip()
-    stack = deque()
+N = int(input())
+E = int(input())
 
-    for bracket in brackets:
-        if bracket == "(":
-            stack.append(bracket)
+networks = [[] for _ in range(N + 1)]
 
-        elif stack:
-            stack.pop()
+for _ in range(E):
+    start, end = map(int,input().split())
+    networks[start].append(end)
+    networks[end].append(start)
 
-        else:
-            stack = True
-            break
+stack = deque([1])
+visited = list([1])
 
-    
-    print(stack)
+while stack:
+    now = stack.pop()
+    for des in networks[now]:
+        if des not in visited:
+            stack.append(des)
+            visited.append(des)
+
+print(len(visited)-1)
