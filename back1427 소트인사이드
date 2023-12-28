@@ -1,0 +1,4 @@
+num = list(map(int,input()))
+num.sort()
+num.reverse()
+print("".join(map(str,num)))
