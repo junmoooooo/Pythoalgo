@@ -34,4 +34,3 @@ for _ in range(int(input())):
 
 
     #양배추를 좌표로 만들어서...
-    
