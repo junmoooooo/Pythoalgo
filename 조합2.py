@@ -45,16 +45,16 @@
 
 #재귀 조합
 # 5C3
-arr = ['A', 'B', 'C', 'D', 'E']  #idx
-sel = [0, 0, 0]     # sidx
+arr = [1, 2, 3, 4]  #idx
+sel = [0, 0]     # sidx
 
 
 def combination(idx, sidx):
-    if sidx == 3:  # sel 길이 범위를 벗어나면 sel이 확정됐다는 소리니까 print
+    if sidx == 2:  # sel 길이 범위를 벗어나면 sel이 확정됐다는 소리니까 print
         print(sel)
         return
 
-    if idx == 5:  # 얘도 벗어나지 않아야 함
+    if idx == 4:  # 얘도 벗어나지 않아야 함
         return
 
     sel[sidx] = arr[idx]  # sidx가 가리키는 위치에 idx가 가리키는 재료를 넣음
@@ -62,3 +62,4 @@ def combination(idx, sidx):
     combination(idx+1, sidx)  # 두번째로는 arr 쪽 화살표만 혼자 가봄.
 
 combination(0, 0)
+
