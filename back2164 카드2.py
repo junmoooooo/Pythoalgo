@@ -9,3 +9,5 @@ while len(cards) >1:
     cards.append(cards.popleft())
     # 카드의 맨앞을 뽑아서 맨뒤로 보내주라!
 print(cards[0])
+
+
