@@ -32,6 +32,3 @@ print(singo)
 # 딕셔너리 신고리스트에 신고당한 사람의 v값을 +1
 # 
 
-  @override
-  late _MyHomePageState createState() => _MyHomePageState();
-}
