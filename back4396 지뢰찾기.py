@@ -11,10 +11,7 @@ board_info = [input().rstrip() for _ in range(N)]  # 지뢰판 정보
 current_status = [input().rstrip() for _ in range(N)]  # 현재 밟은 상태
 
 ans = [(['.'] * N) for _ in range(N)]  # 정답 담을 이차원리스트
-# ans = [('.'* N) for _ in range(N)]
 mine = False  # 지뢰 밟았는지 여부
-
-print(ans)
 
 for r in range(N):
     for c in range(N):
@@ -26,8 +23,8 @@ for r in range(N):
                     cnt += 1  # 지뢰 숫자 추가
             ans[r][c] = str(cnt)  # 다 셌다면 정답배열에 추가(join 위해 스트링으로 형변환)
 
-            if board_info[r][c] == '*':  # 만약 밟은 곳이 지뢰라면,
-                mine = True  # 밟았다고 표시하고 넘어가기
+        if board_info[r][c] == '*':  # 만약 밟은 곳이 지뢰라면,
+            mine = True  # 밟았다고 표시하고 넘어가기
 
 if mine:  # 지뢰를 밟았다면
     for r in range(N):

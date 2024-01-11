@@ -11,3 +11,19 @@ while len(cards) >1:
 print(cards[0])
 
 
+# from collections import deque
+#
+# N = int(input())
+# card = deque()
+# for i in range(1, N+1):
+#     card.append(i)
+#
+# num = 0
+#
+# for j in range(N-1):
+#     card.popleft()
+#     num = card.popleft()
+#     card.append(num)
+#
+#
+# print (*card)
