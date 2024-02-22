@@ -32,3 +32,5 @@ for tc in range(1, T+1):
                 break
 
     print(f'#{tc} {answer}')
+
+    #간선을 중점으로

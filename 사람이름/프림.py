@@ -35,3 +35,5 @@ for tc in range(1, int(input())+1):
         adj[st][ed] = adj[ed][st] = w  # 노드들간의 가중치 자체를 인접 행렬에 넣어서 구조화
 
     print("#{} {}".format(tc, Prim()))
+
+    #정점을 중점으로

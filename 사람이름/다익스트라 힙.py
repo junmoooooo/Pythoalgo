@@ -1,4 +1,4 @@
-# SWEA 5251 최소 이동 거리 풀이
+# SWEA 5251 최소 이동 거리 풀이   다익스트라 > 네비게이션
 import heapq
 
 def dijkstra():
