@@ -12,10 +12,8 @@ for i in range(E):
     parent, child = edges[i*2], edges[i*2+1]
     if not left[parent]:      
         left[parent] = child
-        # 부모를 기준으로 자식을 정하기
     else:
         right[parent] = child
-        # 자식을 기준으로 부모를 정하기?
         
     ancestors[child] = parent
 
@@ -52,3 +50,7 @@ print()
 inorder(root)
 print()
 postorder(root)
+
+
+
+
